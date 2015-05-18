@@ -1,0 +1,13 @@
+{
+  "dir": {
+    "app": {
+      "source": "src/",
+      "dest": "build/"
+    }
+  },
+  "server": {
+  	"livereload": "8000",
+  	"port": "3000",
+    "hostname": "0.0.0.0"
+  }
+}
