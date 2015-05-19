@@ -1,10 +1,10 @@
 {
-  "name": "Debate: Battle Resolution",
+  "name": "DBResolution",
   "version": "0.0.1",
   "description": "Debate the game, redux",
   "author": "Hunter Lightman <me@hunterlightman.com>",
   "scripts": {
-    "preinstall": "npm install -g grunt-cli",
+    "preinstall": "npm install -g grunt-cli"
   },
   "devDependencies": {
     "nib": "~1.0.2",
