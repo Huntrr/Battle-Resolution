@@ -1,7 +1,7 @@
 $ = require('./lib/jquery.js')
 
 module.exports = class Dialog
-  constructor: (@elem) ->
+  constructor: (@game, @elem) ->
     @hidden = true
     @elem.css('display': 'none')
 

@@ -26,7 +26,7 @@ module.exports = class Menu extends Screen
 
     setInterval(@blink, 500)
 
-    $(document).keypress (e) => #fat arrow so this is preserved
+    @game.waitForInput (err) =>
       @game.next()
 
   unload: () ->

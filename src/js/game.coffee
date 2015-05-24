@@ -13,8 +13,8 @@ module.exports = class Game
     # set up elements of the field
     @opponentElem = new Side($('.top .bar'), $('.top .char'))
     @playerElem = new Side($('.bottom .bar'), $('.bottom .char'))
-    @dialog = new Dialog($('.dialog'))
-    @console = new Console($('.message'))
+    @dialog = new Dialog(@, $('.dialog'))
+    @console = new Console(@, $('.message'))
 
   load: (screen) ->
     @current.unload()
@@ -33,3 +33,16 @@ module.exports = class Game
     @index += 1
     @current = @screens[@index]
     @current.load()
+
+  setOpponent: (opp) ->
+    @opponent = opp
+    @opponent.load()
+
+  setPlayer: (play) ->
+    @player = play
+    @player.load()
+
+  waitForInput: (cb) ->
+    $(document).bind 'keypress.wait', (e) => #fat arrow so this is preserved
+      $(document).unbind '.wait'
+      cb(null)

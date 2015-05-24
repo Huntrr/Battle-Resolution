@@ -1,10 +1,11 @@
 /* CONSTANTS */
 BACKGROUND_COLOR = #FFFFFF
-CONSOLE_HEIGHT = 150px
+CONSOLE_HEIGHT = 144px
 CONSOLE_BORDER = 7px
 DIALOG_WIDTH = 500px
 STATUS_WIDTH = 300px
 STATUS_HEIGHT = 60px
+CHAR_HEIGHT = 250px // max height for character images
 
 @font-face
     font-family 'Pokemon'
@@ -38,6 +39,8 @@ h1
   bottom 5px
   left 5px
   right CONSOLE_BORDER 
+  word-wrap break-word
+  word-break break-all
 
 .dialog
   margin auto
@@ -81,6 +84,19 @@ h1
   text-align right
   font-size 12px
   &:before
-    content: '('
+    content '('
   &:after
-    content: ')'
+    content ')'
+
+.char
+  position fixed
+  img
+    height auto
+    width auto
+    max-height CHAR_HEIGHT
+
+.top .char
+  left STATUS_WIDTH + 100px
+
+.bottom .char
+  right STATUS_WIDTH + 100px

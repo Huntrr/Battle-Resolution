@@ -9,6 +9,7 @@ module.exports = class Side
     @nameElem = $('.name', @statusElem) # selects the name element, child of statusElem
     @levelElem = $('.level', @statusElem)
     @healthElem = $('.health', @statusElem)
+    @statsElem = $('.status', @statusElem)
 
   show: (display = true) ->
     @hidden = !display
@@ -20,3 +21,21 @@ module.exports = class Side
 
   hide: () ->
     @show false
+
+  setImg: (dir) ->
+    @charElem.html('<img src="' + dir + '" alt="Character Image" />')
+
+  setName: (name) ->
+    @nameElem.html(name)
+
+  setLevel: (level) ->
+    @levelElem.html('' + level)
+
+  setStatus: (status) ->
+    @statsElem.html(status)
+
+  unsetStatus: () ->
+    @setStatus('none')
+
+  setCase: (cse) ->
+    @healthElem.html('' + cse)
