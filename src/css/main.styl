@@ -1,5 +1,10 @@
 /* CONSTANTS */
 BACKGROUND_COLOR = #FFFFFF
+CONSOLE_HEIGHT = 150px
+CONSOLE_BORDER = 7px
+DIALOG_WIDTH = 500px
+STATUS_WIDTH = 300px
+STATUS_HEIGHT = 60px
 
 @font-face
     font-family 'Pokemon'
@@ -17,3 +22,65 @@ body
 
 h1
   font-weight BOLD
+
+// handling the styling of the console
+.message
+.dialog
+  position fixed
+  border-style double
+  border-radius 7px
+  border-width CONSOLE_BORDER
+  padding 10px
+  font-size 24px
+
+.message
+  height CONSOLE_HEIGHT
+  bottom 5px
+  left 5px
+  right CONSOLE_BORDER 
+
+.dialog
+  margin auto
+  width DIALOG_WIDTH
+  top 20%
+  bottom 20%
+
+// handling styling of the player status boxes
+.bar
+  position fixed
+  width STATUS_WIDTH
+  min-height STATUS_HEIGHT
+  border-bottom-style solid
+  border-bottom-width 7px
+  border-radius 5px
+  padding 10px 10px 10px 10px
+
+.top .bar
+  top 20px
+  left 20px
+  border-left-style solid
+  border-left-width 3px
+
+.bottom .bar
+  bottom CONSOLE_HEIGHT + 50px
+  right 20px
+  border-right-style solid
+  border-right-width 3px
+
+.name
+  padding-bottom 10px
+  font-size 24px
+
+.lvl
+  text-align center
+  padding-bottom 10px
+  font-size 12px
+
+.status
+  padding-top 10px
+  text-align right
+  font-size 12px
+  &:before
+    content: '('
+  &:after
+    content: ')'

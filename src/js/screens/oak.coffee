@@ -7,6 +7,8 @@ module.exports = class Oak extends Screen
 
   load: () ->
     super()
+    @game.opponentElem.show()
+    @game.console.show()
 
   unload: () ->
     super()

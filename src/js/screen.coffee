@@ -7,6 +7,7 @@ module.exports = class Screen
 
 
   unload: () ->
+    $('.status').html('')
     $('#background').html('')
     $('body').removeAttr('style')
     $('#background').removeAttr('style')
