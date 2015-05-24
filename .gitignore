@@ -3,6 +3,7 @@ logs
 *.log
 .brackets
 .DS_Store
+*.swp
 
 # Runtime data
 pids
