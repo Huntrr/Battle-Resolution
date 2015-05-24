@@ -34,6 +34,12 @@ module.exports = class Game
     @current = @screens[@index]
     @current.load()
 
+  prev: () ->
+    @current.unload()
+    @index -= if @index > 0 then 1 else 0
+    @current = @screens[@index]
+    @current.load()
+
   setOpponent: (opp) ->
     @opponent = opp
     @opponent.load()
@@ -43,6 +49,7 @@ module.exports = class Game
     @player.load()
 
   waitForInput: (cb) ->
-    $(document).bind 'keypress.wait', (e) => #fat arrow so this is preserved
+    $(document).bind 'keypress.wait', (e) ->
+      console.log e.which
       $(document).unbind '.wait'
       cb(null)

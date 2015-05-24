@@ -27,6 +27,7 @@ h1
 // handling the styling of the console
 .message
 .dialog
+  background-color #FFFFFF
   position fixed
   border-style double
   border-radius 7px
@@ -40,13 +41,6 @@ h1
   left 5px
   right CONSOLE_BORDER 
   word-wrap break-word
-  word-break break-all
-
-.dialog
-  margin auto
-  width DIALOG_WIDTH
-  top 20%
-  bottom 20%
 
 // handling styling of the player status boxes
 .bar
@@ -100,3 +94,30 @@ h1
 
 .bottom .char
   right STATUS_WIDTH + 100px
+
+
+// styling the dialog boxes
+.dialog
+  margin auto
+  width DIALOG_WIDTH
+  left calc(50% - 250px)
+  top 20%
+  bottom 20%
+  overflow-y hidden
+  .title
+    text-align center
+    border-bottom-style solid
+    border-bottom-width 1px
+    padding 10px
+    margin 10px
+  .options
+    list-style-type none
+    margin 20px
+    margin-left -25px
+    li
+      border-bottom-style dashed
+      border-bottom-width 1px
+      &.selected
+        &:before
+          content '> ' 
+      padding 20px
