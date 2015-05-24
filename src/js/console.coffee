@@ -1,4 +1,5 @@
 $ = require('./lib/jquery.js')
+require './lib/jquery-ui.js'
 
 module.exports = class Console
   constructor: (@game, @elem) ->
@@ -8,7 +9,10 @@ module.exports = class Console
 
   show: (display = true) ->
     @hidden = !display
-    @elem.css('display': if @hidden then 'none' else 'block')
+    if(@hidden)
+      @elem.hide('fade', {duration: 0})
+    else
+      @elem.show('fade', {duration: 1000})
 
   toggle: () ->
     @show @hidden

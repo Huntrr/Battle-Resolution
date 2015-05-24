@@ -1,4 +1,5 @@
 $ = require './../lib/jquery.js'
+require './../lib/jquery-ui.js'
 Screen = require './../screen.coffee'
 
 module.exports = class Menu extends Screen

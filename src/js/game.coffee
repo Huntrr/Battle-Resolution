@@ -31,14 +31,18 @@ module.exports = class Game
   next: () ->
     @current.unload()
     @index += 1
-    @current = @screens[@index]
-    @current.load()
+    setTimeout () =>
+      @current = @screens[@index]
+      @current.load()
+    , 250
 
   prev: () ->
     @current.unload()
     @index -= if @index > 0 then 1 else 0
-    @current = @screens[@index]
-    @current.load()
+    setTimeout () =>
+      @current = @screens[@index]
+      @current.load()
+    , 250
 
   setOpponent: (opp) ->
     @opponent = opp

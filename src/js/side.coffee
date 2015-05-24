@@ -1,10 +1,11 @@
 $ = require('./lib/jquery.js')
+require('./lib/jquery-ui.js')
 
 module.exports = class Side
   constructor: (@statusElem, @charElem) ->
     @hidden = true
-    @statusElem.css('display': 'none')
-    @charElem.css('display': 'none')
+    @statusElem.css('display', 'none')
+    @charElem.css('display', 'none')
 
     @nameElem = $('.name', @statusElem) # selects the name element, child of statusElem
     @levelElem = $('.level', @statusElem)
@@ -13,8 +14,12 @@ module.exports = class Side
 
   show: (display = true) ->
     @hidden = !display
-    @statusElem.css('display': if @hidden then 'none' else 'block')
-    @charElem.css('display': if @hidden then 'none' else 'block')
+    if(!@hidden)
+      @statusElem.show('slide', {duration: 1000})
+      @charElem.show('drop', {duration: 1000, direction: 'up'})
+    else
+      @statusElem.hide('slide', {duration: 0})
+      @charElem.hide('slide', {duration: 0})
 
   toggle: () ->
     @show @hidden
