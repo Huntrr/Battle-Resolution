@@ -1,4 +1,5 @@
 $ = require('./lib/jquery.js')
+require './lib/jquery-ui.js'
 
 # imports
 Side = require('./side.coffee')
@@ -28,21 +29,24 @@ module.exports = class Game
     @current = @screens[0]
     @current.load()
 
-  next: () ->
-    @current.unload()
-    @index += 1
-    setTimeout () =>
+  change: (x, effect = 'fold') ->
+    $('#mask').show(effect, {duration: 500, complete: () =>
+      @current.unload()
+      @index += x
       @current = @screens[@index]
-      @current.load()
-    , 250
+      setTimeout () =>
+        $('#mask').hide('fade', {duration: 500, complete: () =>
+          # do nothing
+        })
+        @current.load()
+      , 250
+    })
+
+  next: () ->
+    @change 1
 
   prev: () ->
-    @current.unload()
-    @index -= if @index > 0 then 1 else 0
-    setTimeout () =>
-      @current = @screens[@index]
-      @current.load()
-    , 250
+    @change -1
 
   setOpponent: (opp) ->
     @opponent = opp
@@ -57,3 +61,8 @@ module.exports = class Game
       console.log e.which
       $(document).unbind '.wait'
       cb(null)
+
+  pause: (ms, cb) ->
+    setTimeout () ->
+      cb(null)
+    , ms

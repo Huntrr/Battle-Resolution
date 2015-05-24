@@ -15,6 +15,8 @@ module.exports = class Oak extends Screen
 
     Async.waterfall [
       (cb) =>
+        @game.pause 1000, cb
+      , (cb) =>
         @game.opponent.say 'Hello there! Welcome to the world of Barlow Debate!
                             My name is SMITH! People call me SMITH! This world
                             is inhabited by creatures called DEBATERS! For some
