@@ -1,10 +1,12 @@
 $ = require './lib/jquery.js'
+Screen = require './screen.coffee'
 
 module.exports = class Level extends Screen
-  constructor: (@background, @page, @player, @opponent) ->
-    super @background @page
+  constructor: (@game, @player, @opponent) ->
+    super @game
 
   load: () ->
+    super()
 
   unload: () ->
     super()
