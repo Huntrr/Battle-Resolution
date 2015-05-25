@@ -38,9 +38,17 @@ module.exports = class Console
         if(@elem.prop('scrollHeight') > @elem.outerHeight() - 5)
           # element is overflowing, time to wait for input
           message = '...'
+          
+          # go back enough characters to print ...
           cur = @elem.html()
           @stream = cur.substring(cur.length - (message.length + 2)) + @stream
           @elem.html(cur.substring(0, cur.length - (message.length + 2)))
+
+          # go back to the previous word, so we don't cut off in the middle of a word
+          cur = @elem.html()
+          @stream = cur.substring(cur.lastIndexOf(' ')) + @stream
+          @elem.html(cur.substring(0, cur.lastIndexOf(' ')))
+
           @elem.append(message)
           $(document).unbind '.console'
           @game.waitForInput (err) =>

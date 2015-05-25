@@ -35,7 +35,7 @@ module.exports = class Game
       @index += x
       @current = @screens[@index]
       setTimeout () =>
-        $('#mask').hide('fade', {duration: 500, complete: () =>
+        $('#mask').hide('fade', {duration: 500, complete: () ->
           # do nothing
         })
         @current.load()

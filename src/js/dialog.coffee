@@ -23,7 +23,7 @@ module.exports = class Dialog
     @show false
 
   draw: () ->
-    itemHeight = 100
+    itemHeight = 80
     num = (@elem.height() - @title.height()) / itemHeight
     num = if num >= @list.length then @list.length - 1 else num
 
@@ -38,7 +38,7 @@ module.exports = class Dialog
       cur = @offset + n
       @options.append('<li' + (if (cur is @selected) then ' class="selected">' else '>') + @list[cur][0] + '</li>')
 
-  menu: (title, options..., cb) ->
+  arrMenu: (title, options, cb) ->
     @offset = 0
     @selected = 0
     @title.html(title)
@@ -67,3 +67,6 @@ module.exports = class Dialog
 
       e.preventDefault()
     @show true
+    
+  menu: (title, options..., cb) ->
+    @arrMenu(title, options, cb)
