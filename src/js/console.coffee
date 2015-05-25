@@ -20,6 +20,11 @@ module.exports = class Console
   hide: () ->
     @show false
 
+  nextPage: () ->
+    while @elem.prop('scrollHeight') <= @elem.outerHeight() - 5 and @stream.length > 0
+      @elem.append(@stream.substring(0,1))
+      @stream = @stream.substring(1)
+      
   put: (what, cb) ->
     @elem.html('')
     @stream = what
@@ -29,7 +34,7 @@ module.exports = class Console
     @refresh_rate = @default_rate
 
     $(document).bind 'keypress.console', (e) =>
-      @refresh_rate = 0
+      @nextPage()
 
     setTimeout(f = (=>
       if(@stream.length > 0)
@@ -53,7 +58,7 @@ module.exports = class Console
           $(document).unbind '.console'
           @game.waitForInput (err) =>
             @refresh_rate = @default_rate
-            $(document).bind 'keypress.console', (e) => @refresh_rate = 0
+            $(document).bind 'keypress.console', (e) => @nextPage()
             @elem.html('')
             f()
         else

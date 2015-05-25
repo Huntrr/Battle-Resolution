@@ -8,9 +8,10 @@ module.exports = class Flourish extends Move
     super 'FLOURISH'
 
   getDamage: () ->
-    dmg = @user.presentation - @target.case / 2
+    dmg = @user.presentation - @target.case / 3
     return if dmg > 0.1 then dmg else 0.1
 
   use: (cb) ->
-    @target.damage(getDamage())
-    @announce cb, if getDamage() < 1 then 'It was not very effective...' else 'The judge was thoroughly impressed with ' + @user.name + '\'s flair!'
+    super()
+    @target.damage(@getDamage())
+    @announce cb, if @getDamage() < 1 then 'It was not very effective...' else 'The judge was thoroughly impressed with ' + @user.name + '\'s flair!'

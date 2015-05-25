@@ -18,6 +18,28 @@ module.exports = (grunt) ->
           '<%= config.dir.app.dest %>/js/script.js': ['<%= config.dir.app.source %>/js/**/*.js', '<%= config.dir.app.source %>/js/**/*.coffee']
         options:
           transform: ['coffeeify']
+          plugin: [
+            [
+              'remapify',
+              [
+                {
+                  src: "**/*.coffee",
+                  cwd: "./src/js/moves"
+                  expose: "moves",
+                },
+                {
+                  src: "**/*.coffee",
+                  cwd: "./src/js/debaters"
+                  expose: "debaters"
+                },
+                {
+                  src: "**/*.*",
+                  cwd: "./src/js/lib"
+                  expose: "lib"
+                }
+              ]
+            ]
+          ]
     copy:
       main:
         files: [
@@ -95,10 +117,10 @@ module.exports = (grunt) ->
           base: '<%= config.dir.app.dest %>',
           port: '<%= config.server.port %>',
           keepalive:true
-        
+
   # load all grunt tasks matching the `grunt-*` pattern
   require('load-grunt-tasks') grunt
- 
+
   grunt.registerTask "build", [
     "clean"
     "coffeelint"

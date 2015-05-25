@@ -4,10 +4,13 @@ $ = require './lib/jquery.js'
 module.exports = class Effect
   constructor: (@name, @turns) ->
 
-  invoke: () ->
+  invoke: (cb) ->
     # called when move is used
     console.log @name + ' invoked'
     @turns--
+
+  unload: (cb) ->
+    # should gracefully remove the effects of the status
 
   expired: () ->
     return @turns <= 0

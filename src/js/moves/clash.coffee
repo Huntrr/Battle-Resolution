@@ -10,5 +10,6 @@ module.exports = class Clash extends Move
     return @user.clash / 6 - @target.organization / 12
 
   use: (cb) ->
-    @target.damage(getDamage())
+    super()
+    @target.damage(@getDamage())
     @announce cb

@@ -8,7 +8,7 @@ module.exports = class Move
     @effectOptions = {direction: 'right', distance: 20, times: 2}
 
   announce: (cb, extra = '') ->
-    @game.console.put @user + ' used ' + @name '! ' + extra, cb
+    @game.console.put @user.name + ' used ' + @name + '! ' + extra, cb
  
   getDamage: () ->
     return @user.clash / 3 - @target.organization / 6
@@ -17,7 +17,7 @@ module.exports = class Move
     # called when move is used
     @target = @user.getTarget()
     console.log @name + ' used'
-    @user.effect(@effect, @effectOptions)
+    @user.me.charElem.effect(@effect, @effectOptions)
 
   setUser: (user) ->
     @user = user

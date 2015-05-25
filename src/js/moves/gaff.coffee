@@ -12,5 +12,13 @@ module.exports = class Gaff extends Move
     return Math.floor((Math.random() * 4) - 3) + @user.presentation / 2
 
   use: (cb) ->
-    @target.damage(getDamage())
-    @announce cb, if getDamage() < 0 then 'But the judge was not impressed and the move backfired!!' else 'The GAFF successfully confused the judge!'
+    super()
+    damage = @getDamage()
+    @target.damage(damage)
+
+    if damage < 0
+      @announce cb, 'But the judge was not impressed and the move backfired!!'
+    else if damage > 1
+      @announce cb, 'The GAFF successfully confused the judge, dealing ' + damage + ' damage to ' + @target.name + '\'s case!'
+    else
+      @announce cb, 'It was not very effective...'

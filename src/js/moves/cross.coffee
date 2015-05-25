@@ -11,5 +11,6 @@ module.exports = class Cross extends Move
     return if dmg > 0.1 then dmg else 0.1
 
   use: (cb) ->
-    @target.damage(getDamage())
-    @announce cb, if getDamage() < 1 then 'It was not very effective...' else 'That stunning line of cross-examination will surely hurt ' + @target.name + ' greatly!'
+    super()
+    @target.damage(@getDamage())
+    @announce cb, if @getDamage() < 1 then 'It was not very effective...' else 'That stunning line of cross-examination will surely hurt ' + @target.name + ' greatly!'

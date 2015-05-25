@@ -1,4 +1,6 @@
-$ = require './lib/jquery.js'
+$ = require 'lib/jquery.js'
+require 'lib/jquery-ui.js'
+Async = require 'lib/async.js'
 
 # constants
 dir = './img/char/'
@@ -25,6 +27,8 @@ module.exports = class Debater
     @moves = []
     @statuses = []
 
+    @canMove = true
+
   setName: (name) ->
     @name = name
 
@@ -35,9 +39,43 @@ module.exports = class Debater
   load: () ->
     @me.setImg(dir + @img + (if @opponent then '' else '_back') + ftype)
     @me.setName(@name)
+    @update()
+
+  update: () -> #updates states
     @me.setLevel(@level)
-    @me.setStatus(@type)
-    @me.setCase(@case)
+
+    shownCase = Math.floor(@case * 100)/100
+    @me.setCase(shownCase)
+
+    status = @type + (if @statuses.length > 0 then '|' else '')
+    status += ' ' + effect.name for effect in @statuses
+    @me.setStatus(status)
+
+  # move loop
+  go: (callback) ->
+    @canMove = true
+
+    actions = []
+    for i in [0...@statuses.length]
+      status = @statuses[i]
+      if status.expired() #if it's expired, push its unload function to be executed
+        actions.push (cb) ->
+          status.unload(cb)
+          @update()
+        @statuses.splice i, 1
+      else #else execute its invoke function
+        actions.push (cb) ->
+          status.invoke(cb)
+          @update()
+
+    actions.push (cb) =>
+      if @canMove
+        @getMove (err, move) ->
+          move.use(callback)
+          cb(null)
+        @update()
+
+    Async.waterfall actions
 
   say: (what, cb) ->
     @game.console.put(@name + ': ' + what, cb)
@@ -52,8 +90,21 @@ module.exports = class Debater
     status.setGame(@game)
     @statuses.push(status)
 
+  die: () ->
+    @me.charElem.hide('explode', {duration: 1000})
+
+  setHealth: (amount) ->
+    @case = amount
+    @update()
+    if @case <= 0
+      @die()
+
   damage: (amount) ->
-    @case -= amount
+    @setHealth @case - amount
 
   heal: (amount) ->
     @damage(-amount)
+
+  getMove: (cb) -> # async because player moves
+    move = @moves[Math.floor(Math.random()*@moves.length)]
+    cb(null, move)
