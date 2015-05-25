@@ -1,6 +1,10 @@
 $ = require('./lib/jquery.js')
 require './lib/jquery-ui.js'
 
+# Constants
+LEVELS_TO_STAT_UPGRADE = 2 #update stats every 2 levels
+UPGRADE_AMOUNT = 0.5
+
 # imports
 Side = require('./side.coffee')
 Dialog = require('./dialog.coffee')
@@ -30,6 +34,10 @@ module.exports = class Game
   start: () ->
     @current = @screens[0]
     @current.load()
+
+  restart: () ->
+    # refresh page
+    window.location.reload()
 
   change: (x, effect = 'fold') ->
     $('#mask').show(effect, {duration: 500, complete: () =>
@@ -66,7 +74,20 @@ module.exports = class Game
                     @availableMoves, (err, result) =>
                       @removeMove result.name
                       @player.addMove result
-                      cb(err)
+                      if @player.level % LEVELS_TO_STAT_UPGRADE is 0
+                        @dialog.menu 'What\'s this? ' + @player.name + ' is
+                        evolving! Select a STAT to upgrade:',
+                        ['CASE (' + @player.startingCase + ')', () => @player.startingCase += UPGRADE_AMOUNT],
+                        ['CLASH (' + @player.startingClash + ')', () => @player.startingClash += UPGRADE_AMOUNT],
+                        ['PRESENTATION (' + @player.startingPresentation + ')', () => @player.startingPresentation += UPGRADE_AMOUNT],
+                        ['ORGANIZATION (' + @player.startingOrganization + ')', () => @player.startingOrganization += UPGRADE_AMOUNT],
+                        ['CROSS (' + @player.startingCross + ')', () => @player.startingCross += UPGRADE_AMOUNT],
+                        ['CIVILITY (' + @player.startingCivility + ')', () => @player.startingCivility += UPGRADE_AMOUNT],
+                        (err, result) ->
+                          result()
+                          cb(err)
+                      else
+                        cb(err)
 
   # takes a string and finds the corresponding move in js/moves/[string].coffee
   # Adds that move to the list the player can choose from on level up

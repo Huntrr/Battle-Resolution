@@ -30,8 +30,22 @@ $ ->
                             that... I mean we must NEGATE the resolution that
                             resolved... this house would... we are...
                             COMMUNISM!',
-                            require('moves/gaff.coffee'))
+                            [require('moves/gaff.coffee')])
   )
+
+  # LEVEL 2 - Huminski
+  game.addScreen(new Battle(game, require('debaters/huminski.coffee'),
+                            'Hello! T-bone Huminski here! Fear my
+                            sandals, and prepare to die!',
+                            'Oh... I lost... This is like the Integrity
+                            Basketball game all over again... Oh well...
+                            At least I still have my sandals',
+                            'Hah! That\'s right! I just GATSBY\'d you
+                            so hard! ... Yea that makes sense, why
+                            wouldn\'t it!?',
+                            [require('moves/ramble.coffee'), require('moves/sandal.coffee')])
+  )
+
 
   # start the game
   game.start()

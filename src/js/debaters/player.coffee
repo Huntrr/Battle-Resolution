@@ -21,16 +21,19 @@ module.exports = class Player extends Debater
     @startingCase = @case
     @startingClash = @clash
     @startingPresentation = @presentation
+    @startingOrganization = @organization
     @startingCivility = @civility
     @startingCross = @cross
 
   load: () ->
-    super()
+    console.log 'Reloading player'
     @case = @startingCase
     @clash = @startingClash
     @presentation = @startingPresentation
+    @organization = @startingOrganization
     @civility = @startingCivility
     @cross = @startingCross
+    super()
 
   say: (what, cb) ->
     @game.console.put(@name + ': ' + what, cb)

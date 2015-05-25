@@ -4,7 +4,7 @@ Screen = require './screen.coffee'
 
 # Battle screen. Pits player against an enemy
 module.exports = class Battle extends Screen
-  constructor: (@game, @Opponent, @opener = 'For Karl Marx!', @won = '... You know what? You\'re right. Maybe CAPITALISM is better after all!', @lost = 'Hah! That\'s right! Another win for COMMUNISM.', @NextMove) ->
+  constructor: (@game, @Opponent, @opener = 'For Karl Marx!', @won = '... You know what? You\'re right. Maybe CAPITALISM is better after all!', @lost = 'Hah! That\'s right! Another win for COMMUNISM.', @NewMoves) ->
 
   load: () ->
     super()
@@ -70,8 +70,16 @@ module.exports = class Battle extends Screen
 
   win: () ->
     @game.opponent.say @won, (err) =>
-      @game.addMove @NextMove
+      @game.addMove(newMove) for newMove in @NewMoves
       @game.levelUp (err) => @game.next()
 
   lose: () ->
-    @game.opponent.say @lost, () => @game.change(0)
+    @game.opponent.say @lost, () =>
+      @game.dialog.menu 'You LOST. Would you like to continue?',
+                        ['YES, CONTINUE', true],
+                        ['NO, QUIT', false],
+                        (err, cont) =>
+                          if cont
+                            @game.change(0)
+                          else
+                            @game.restart()

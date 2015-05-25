@@ -33,6 +33,11 @@ module.exports = (grunt) ->
                   expose: "debaters"
                 },
                 {
+                  src: "**/*.coffee",
+                  cwd: "./src/js/effects"
+                  expose: "effects"
+                },
+                {
                   src: "**/*.*",
                   cwd: "./src/js/lib"
                   expose: "lib"

@@ -4,7 +4,7 @@ Debater = require './../debater.coffee'
 # Basic debater class. Controls an actor in the game
 module.exports = class Novice extends Debater
   constructor: (@game) ->
-    super(@game, true, 'NOVICE', 1, 2, 'CUPCAKE')
+    super(@game, true, 'NOVICE', 1, 1, 'CUPCAKE')
 
     # set basic statis
     # ALREADY SET (constructed)

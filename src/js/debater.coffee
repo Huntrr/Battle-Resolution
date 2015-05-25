@@ -59,12 +59,12 @@ module.exports = class Debater
     for i in [0...@statuses.length]
       status = @statuses[i]
       if status.expired() #if it's expired, push its unload function to be executed
-        actions.push (cb) ->
+        actions.push (cb) =>
           status.unload(cb)
           @update()
         @statuses.splice i, 1
       else #else execute its invoke function
-        actions.push (cb) ->
+        actions.push (cb) =>
           status.invoke(cb)
           @update()
 
@@ -89,6 +89,12 @@ module.exports = class Debater
     status.setTarget(@)
     status.setGame(@game)
     @statuses.push(status)
+
+  has: (status) ->
+    for effect in @statuses
+      if effect.name is status
+        return true
+    return false
 
   die: () ->
     @me.charElem.hide('explode', {duration: 1000})

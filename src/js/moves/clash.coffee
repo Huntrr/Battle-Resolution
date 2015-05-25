@@ -7,9 +7,10 @@ module.exports = class Clash extends Move
     super 'CLASH'
 
   getDamage: () ->
-    return @user.clash / 6 - @target.organization / 12
+    return Math.max(0, @user.clash / 6 - @target.organization / 12)
 
   use: (cb) ->
     super()
-    @target.damage(@getDamage())
-    @announce cb
+    damage = @getDamage()
+    @target.damage(damage)
+    @announce cb, if damage < 0.25 then 'It was not very effective' else ''
