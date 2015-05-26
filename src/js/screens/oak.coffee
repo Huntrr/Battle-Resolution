@@ -73,23 +73,24 @@ module.exports = class Oak extends Screen
                             I\'d teach you how to debate before sending you off to face CDA
                             judges, but we just don\'t have time. You see, we\'ve got a bit
                             of an emergency on our hands. Earlier this year, my old co-coach
-                            EVAN STREAMS moved to China to teach debate there. And, like
-                            everyone in China, while there he became a COMMUNIST. Well, now
-                            he\'s back, and he\'s begun convincing all of my old debaters to
-                            join him under the COMMUNIST FLAG. That means you\'re all I have
+                            EVAN STREAMS moved to China to teach debate there. And, as I feared,
+                            while there, he was abducted by the COMMUNISTS. On top of that, the COMMUNIST
+                            leader, XI JINPING has convinced the rest of the CDA to join him under the
+                            COMMUNIST FLAG. That means you\'re all I have
                             left. Please ' + name + ' I need you to head out and out-debate
-                            EVAN, convincing him to become a God-fearing CAPITALIST. You\'re the only
+                            XI JINPING, convincing him to become a God-fearing CAPITALIST and
+                            saving EVAN STREAMS. You\'re the only
                             hope I have left. Will you help me?', cb
       (cb) =>
-        @game.dialog.menu 'Will you help stop the COMMUNIST EVAN STREAMS and restore a love of CAPITALISM to the debate team?',
+        @game.dialog.menu 'Will you help stop the DIRTY COMMIES and restore a love of CAPITALISM to the debate team?',
                           ['YES', true],
                           ['NO', false],
                           cb
       (result, cb) =>
         if(result is yes)
           @game.opponent.say 'Excellent! You\'ll have to head out now and face all of the
-                              debaters EVAN has turned into COMMUNISTS. Once you\'ve defeated
-                              all of them, you\'ll face EVAN himself. But, before you go, I
+                              debaters XI JINPING has turned into COMMUNISTS. Once you\'ve defeated
+                              all of them, you\'ll face JINPING himself. But, before you go, I
                               can teach you ONE TECHNIQUE. What would you like to learn?', cb
 
         if(result is no)
@@ -108,9 +109,9 @@ module.exports = class Oak extends Screen
                            league, so you\'re sure to get some cupcakes at first, but as you
                            win (in the name of CAPITALISM) your opponents will get more
                            difficult. You\'ll learn more techniques over time. Just pay
-                           attention to your opponents. Your end-goal, of course, is EVAN
-                           STREAMS. You must out-debate him. You must convince that COMMUNIST
-                           that the AMERICAN WAY is best. Good luck ' + @game.player.name + '.', cb
+                           attention to your opponents. Your end-goal, of course, is saving EVAN
+                           STREAMS from the DIRTY COMMIES. You gotta out-debate them all. You must convince those COMMUNISTS
+                           that the AMERICAN WAY is best, and you must rescue EVAN STREAMS. Good luck ' + @game.player.name + '.', cb
       (cb) =>
         @game.next()
       ]

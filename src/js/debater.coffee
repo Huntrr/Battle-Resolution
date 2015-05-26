@@ -96,6 +96,17 @@ module.exports = class Debater
         return true
     return false
 
+  getStatus: (status) ->
+    for effect in @statuses
+      if effect.name is status
+        return status
+    return null
+
+  removeStatus: (status) ->
+    for i in [0...@statuses.length]
+      if @statuses[i].name is status
+        @statuses.splice i, 1
+
   die: () ->
     @me.charElem.hide('explode', {duration: 1000})
 

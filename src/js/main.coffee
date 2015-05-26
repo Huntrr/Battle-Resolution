@@ -46,6 +46,37 @@ $ ->
                             [require('moves/ramble.coffee'), require('moves/sandal.coffee')])
   )
 
+  # LEVEL 3 - Really aggressive novice
+
+  # LEVEL 4 - Sophmore Slumper
+
+  # LEVEL 5 - The Complexity Rubric (secretly a communist plot)
+
+  # LEVEL 6 - THE CAPTAIN (boss #1, picture of McMoran)
+  # (start dialogue with 'This is your captain speaking. Today, I discovered communism')
+
+  # LEVEL 20 - CDA Parent Judge
+
+  # LEVEL 22 - Sam Aldershof
+
+  # LEVEL 25 - Nicolo Marzaro
+
+  # LEVEL 27 - Alyssa Bilinski
+  # Special move: Talk about Grandma's cookies (the Judge was thoroughly Pathos'd)
+
+  # LEVEL 28 - Ron Paul (thinks he is at Libertarian National Convention)
+  # Special move: The Gold Standard
+  # Special move: Summon Brooke Curto
+
+  # LEVEL 29 - Xi Jinping
+  # PLOT TWIST: LOSE MESSAGE: Reveal EVAN IS A COMMY (You can see your friend now, but I have a surprise for you...)
+
+  # LEVEL "30" - Evan streams
+  # OPENER: I WAS THE COMMUNIST ALL ALONG
+  # Need a super lengthy explanation...
+
+  # Closing screen for winning, show Evan back to good side
+
 
   # start the game
   game.start()
