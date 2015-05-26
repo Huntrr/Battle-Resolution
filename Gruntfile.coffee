@@ -130,7 +130,6 @@ module.exports = (grunt) ->
     "coffeelint"
     "browserify"
     "copy"
-    "uglify"
     "jade"
     "stylus"
   ]
@@ -138,6 +137,11 @@ module.exports = (grunt) ->
   grunt.registerTask 'dev', [
     'connect:live'
     'watch'
+  ]
+
+  grunt.registerTask 'production', [
+    'build'
+    'uglify'
   ]
 
   grunt.registerTask 'default', [
