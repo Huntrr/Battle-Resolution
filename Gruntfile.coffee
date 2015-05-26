@@ -101,7 +101,6 @@ module.exports = (grunt) ->
         tasks: [
           'newer:coffeelint:lint'
           'newer:browserify:dist'
-          'newer:uglify:compress'
         ]
       stylus:
         files: ['<%= config.dir.app.source %>/css/**/*.styl']
