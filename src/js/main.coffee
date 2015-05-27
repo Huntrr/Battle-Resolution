@@ -1,11 +1,11 @@
 $ = require './lib/jquery.js'
 
-TEST_MODE = false
 $ ->
   Game = require './game.coffee'
   game = new Game()
 
-  if TEST_MODE
+  testConf = require './testmode-conf.coffee'
+  if testConf.enabled
     Test = require './testmode.coffee'
     test = new Test(game)
     test.run()
