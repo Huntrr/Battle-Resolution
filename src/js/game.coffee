@@ -40,6 +40,10 @@ module.exports = class Game
     window.location.reload()
 
   change: (x, effect = 'fold') ->
+    if @index + x < 0 or @index + x >= @screens.length
+      @current.unload()
+      return
+
     $('#mask').show(effect, {duration: 500, complete: () =>
       @current.unload()
       @index += x
@@ -69,6 +73,8 @@ module.exports = class Game
 
   levelUp: (cb) ->
     @player.level++
+    if @availableMoves.length is 0
+      @addMove require 'moves/clash.coffee'
     @dialog.arrMenu 'LEVEL UP! You\'re speaker score is now ' + @player.level + '.
                     Please select a new move to add to your "special" skillset',
                     @availableMoves, (err, result) =>

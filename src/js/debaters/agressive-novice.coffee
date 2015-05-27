@@ -17,8 +17,8 @@ module.exports = class AggressiveNovice extends Debater
     @civility = 6 # Totally arbitrary
     @cross = 2 # DEFENCE
 
-    # Gaff = require 'moves/gaff.coffee'
-    # @addMove new Gaff()
+    Gaff = require 'moves/gaff.coffee'
+    @addMove new Gaff()
 
     Shout = require 'moves/shout.coffee'
     @addMove new Shout()

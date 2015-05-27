@@ -14,6 +14,6 @@ module.exports = class Shout extends Move
     @target.damage(@getDamage())
     Angry = require 'effects/angry.coffee'
     if not @user.has 'ANGRY'
-      @user.addStatus 'ANGRY'
+      @user.addStatus new Angry()
 
     @announce cb, 'RRAAAAAGGUUUUGH'

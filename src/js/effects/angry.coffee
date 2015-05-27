@@ -2,7 +2,7 @@ $ = require 'lib/jquery.js'
 Effect = require './../effect.coffee'
 
 module.exports = class Angry extends Effect
-  constructor: (@amount) ->
+  constructor: () ->
     super 'ANGRY', 2
 
   invoke: (cb) ->
