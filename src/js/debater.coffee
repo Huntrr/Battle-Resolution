@@ -80,10 +80,21 @@ module.exports = class Debater
   say: (what, cb) ->
     @game.console.put(@name + ': ' + what, cb)
 
+  hasMove: (name) ->
+    for move in @moves
+      if move.name is name
+        return true
+    return false
+
   addMove: (move) ->
-    move.setUser(@)
-    move.setGame(@game)
-    @moves.push(move)
+    if !@hasMove move.name
+      move.setUser(@)
+      move.setGame(@game)
+      @moves.push(move)
+
+  addMoveByClass: (MoveClass) ->
+    move = new MoveClass()
+    @addMove move
 
   addStatus: (status) ->
     status.setTarget(@)
