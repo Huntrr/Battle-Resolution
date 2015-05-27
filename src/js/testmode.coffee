@@ -4,35 +4,28 @@ Battle = require './battle.coffee'
 
 module.exports = class Test
   constructor: (@game) ->
+    config = require './testmode-conf.coffee'
     # ---------------------
     # DEFINE THE ATTRIBUTES
     # ---------------------
-    @name = 'TESTER MCTESTYPANTS'
-    @level = 15
-    @health = 5
-    @clash = 5
-    @presentation = 5
-    @organization = 5
-    @civility = 5
-    @cross = 5
+    @name = config.name
+    @level = config.level
+    @health = config.health
+    @clash = config.clash
+    @presentation = config.presentation
+    @organization = config.organization
+    @civility = config.civility
+    @cross = config.cross
 
     # ----------------
     # DEFINE THE MOVES
     # ----------------
-    @moves = [
-      require 'moves/flourish.coffee'
-      require 'moves/clash.coffee'
-      require 'moves/cross.coffee'
-      require 'moves/shout.coffee'
-    ]
+    @moves = config.moves
 
     # --------------------
     # DEFINE THE OPPONENTS
     # --------------------
-    @opponents = [
-      require 'debaters/agressive-novice.coffee'
-      # require 'debaters/novice.coffee'
-    ]
+    @opponents = config.opponents
 
   run: () ->
     @setupPlayer()

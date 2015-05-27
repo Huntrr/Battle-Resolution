@@ -39,6 +39,7 @@ module.exports = class Debater
   load: () ->
     @me.setImg(dir + @img + (if @opponent then '' else '_back') + ftype)
     @me.setName(@name)
+    @statuses = [] # reset statuses on load()
     @update()
 
   update: () -> #updates states
@@ -117,6 +118,12 @@ module.exports = class Debater
     for i in [0...@statuses.length]
       if @statuses[i].name is status
         @statuses.splice i, 1
+
+        # re-execute the function, since the indices in the array
+        # are too messed up to continue. Do this until no instances
+        # of move are left in statuses (looks heavier than it is
+        # since there will never be too many things in @statuses)
+        return @removeStatus status
 
   die: () ->
     @me.charElem.hide('explode', {duration: 1000})
