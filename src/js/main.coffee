@@ -1,6 +1,6 @@
 $ = require './lib/jquery.js'
 
-TEST_MODE = true
+TEST_MODE = false
 $ ->
   Game = require './game.coffee'
   game = new Game()
