@@ -19,13 +19,13 @@ $ ->
   # Battle screens
   Battle = require './battle.coffee'
 
-  # LEVEL 1 - Novice
+  LEVEL 1 - Novice
   game.addScreen(new Battle(game, require('debaters/novice.coffee'),
                             'This is my first debate! I hope I can
                             convince you of the merits of COMMUNISM...
                             But first... How long is my speech?',
                             'Wow. You\'re really good. I think I\'m
-                            going to go home and read up on Keynes...',
+                            going to go home and read up on Keyness...',
                             'And THAT\'S why we must affirm the resolution
                             that... I mean we must NEGATE the resolution that
                             resolved... this house would... we are...
@@ -47,6 +47,15 @@ $ ->
   )
 
   # LEVEL 3 - Really aggressive novice
+  game.addScreen(new Battle(game, require('debaters/agressive-novice.coffee'),
+                            'FREE THOUGHT is dumb! SMITH only teaches you
+                            stock arguments anyway...',
+                            'I still refuse to change my way of thinking.
+                            The JUDGE was the wrong one here.',
+                            'Ha ha! I told you FREE THOUGHT was super dumb',
+                            #require('moves/gaff.coffee'), add back in later
+                            [require('moves/shout.coffee')])
+  )
 
   # LEVEL 4 - Sophmore Slumper
 
