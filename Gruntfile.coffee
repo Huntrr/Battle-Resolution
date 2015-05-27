@@ -101,7 +101,6 @@ module.exports = (grunt) ->
         tasks: [
           'newer:coffeelint:lint'
           'newer:browserify:dist'
-          'newer:uglify:compress'
         ]
       stylus:
         files: ['<%= config.dir.app.source %>/css/**/*.styl']
@@ -109,19 +108,6 @@ module.exports = (grunt) ->
       jade:
         files: ['<%= config.dir.app.source %>/**/*.jade']
         tasks: ['newer:jade:compile']
-    connect:
-      live:
-        options:
-          hostname: '<%= config.server.hostname %>',
-          livereload: '<%= config.server.livereload %>',
-          base: '<%= config.dir.app.dest %>',
-          port: '<%= config.server.port %>'
-      alive:
-        options:
-          hostname: '<%= config.server.hostname %>',
-          base: '<%= config.dir.app.dest %>',
-          port: '<%= config.server.port %>',
-          keepalive:true
 
   # load all grunt tasks matching the `grunt-*` pattern
   require('load-grunt-tasks') grunt
@@ -131,14 +117,17 @@ module.exports = (grunt) ->
     "coffeelint"
     "browserify"
     "copy"
-    "uglify"
     "jade"
     "stylus"
   ]
 
   grunt.registerTask 'dev', [
-    'connect:live'
     'watch'
+  ]
+
+  grunt.registerTask 'production', [
+    'build'
+    'uglify'
   ]
 
   grunt.registerTask 'default', [
