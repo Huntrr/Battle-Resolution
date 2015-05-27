@@ -27,14 +27,6 @@ module.exports = class Test
     # --------------------
     @opponents = config.opponents
 
-
-
-
-
-
-
-
-
   run: () ->
     @setupPlayer()
     @addMoves()
@@ -52,12 +44,12 @@ module.exports = class Test
     @player.startingOrganization = @organization
     @player.startingCivility = @civility
     @player.startingCross = @cross
-  
+
   addMoves: () ->
     for Move in @moves
       move = new Move()
       @player.addMove move
-  
+
   addOpponents: () ->
     for opp in @opponents
       @game.addScreen(new Battle(@game, opp, 'OPENING TEXT',

@@ -53,6 +53,15 @@ $ ->
     )
 
     # LEVEL 3 - Really aggressive novice
+    game.addScreen(new Battle(game, require('debaters/agressive-novice.coffee'),
+                              'FREE THOUGHT is dumb! SMITH only teaches you
+                              stock arguments anyway...',
+                              'I still refuse to change my way of thinking.
+                              The JUDGE was the wrong one here.',
+                              'Ha ha! I told you FREE THOUGHT was super dumb',
+                              #require('moves/gaff.coffee'), add back in later
+                              [require('moves/shout.coffee')])
+    )
 
     # LEVEL 4 - Sophmore Slumper
 
@@ -82,7 +91,6 @@ $ ->
     # Need a super lengthy explanation...
 
     # Closing screen for winning, show Evan back to good side
-
 
   # start the game
   game.start()
