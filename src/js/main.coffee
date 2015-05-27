@@ -53,7 +53,7 @@ $ ->
     )
 
     # LEVEL 3 - Really aggressive novice
-    game.addScreen(new Battle(game, require('debaters/agressive-novice.coffee'),
+    game.addScreen(new Battle(game, require('debaters/aggressive-novice.coffee'),
                               'FREE THOUGHT is dumb! SMITH only teaches you
                               stock arguments anyway...',
                               'I still refuse to change my way of thinking.
