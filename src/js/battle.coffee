@@ -30,7 +30,7 @@ module.exports = class Battle extends Screen
       @second = @enemy
     else
       @first = @enemy
-      @second = player
+      @second = @player
 
     Async.waterfall [
       (cb) =>

@@ -24,7 +24,7 @@ module.exports = class Console
     while @elem.prop('scrollHeight') <= @elem.outerHeight() - 5 and @stream.length > 0
       @elem.append(@stream.substring(0,1))
       @stream = @stream.substring(1)
-      
+
   put: (what, cb) ->
     @elem.html('')
     @stream = what
@@ -43,7 +43,7 @@ module.exports = class Console
         if(@elem.prop('scrollHeight') > @elem.outerHeight() - 5)
           # element is overflowing, time to wait for input
           message = '...'
-          
+
           # go back enough characters to print ...
           cur = @elem.html()
           @stream = cur.substring(cur.length - (message.length + 2)) + @stream
