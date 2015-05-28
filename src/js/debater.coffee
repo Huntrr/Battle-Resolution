@@ -77,6 +77,10 @@ module.exports = class Debater
           move.use(callback)
           cb(null)
         @update()
+      else
+        cb(null)
+        callback(null)
+        @update()
 
     Async.waterfall actions
 
