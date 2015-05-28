@@ -17,11 +17,11 @@ module.exports = class ComplexityRubric extends Debater
     @civility = 4 # Totally arbitrary
     @cross = 2 # DEFENCE
 
-    #Star = require 'moves/star.coffee'
-    #@addMove new Star()
+    Star = require 'moves/star.coffee'
+    @addMove new Star()
 
-    #Shout = require 'moves/shout.coffee'
-    #@addMove new Shout()
+    Shout = require 'moves/shout.coffee'
+    @addMove new Shout()
 
     AggressiveHighlight = require 'moves/aggressive-highlight.coffee'
     @addMove new AggressiveHighlight()
