@@ -7,7 +7,8 @@ module.exports = class Asleep extends Effect
 
   invoke: (cb) ->
     super(cb)
-    # @target.canMove = false
+    @target.canMove = false
+    @game.console.put(@target.name + ' is asleep and can\'t speak!.', cb)
     cb(null)
 
   unload: (cb) ->

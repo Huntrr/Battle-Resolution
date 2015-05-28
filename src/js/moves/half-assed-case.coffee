@@ -15,8 +15,8 @@ module.exports = class HalfAssedCase extends Move
 
     if @target.has 'BORED'
       @announce cb, @target.name + ' is having a difficult time staying awake!'
-      if Math.floor(Math.random() * 3) is 1
-        @target.addStatus new Asleep(1)
+      # if Math.floor(Math.random() * 3) is 1
+      @target.addStatus new Asleep(1)
 
     else
       @target.addStatus new Bored(2, Math.floor(Math.random() * 3) + 1)
