@@ -62,6 +62,12 @@ $ ->
                               #require('moves/gaff.coffee'), add back in later
                               [require('moves/shout.coffee')])
     )
+    game.addScreen(new Battle(game, require('debaters/complexity-rubric.coffee'),
+                                'I am a communist.',
+                                'I have been slain.',
+                                'I win.',
+                                [require('moves/shout.coffee')])
+    )
 
     # LEVEL 4 - Sophmore Slumper
 

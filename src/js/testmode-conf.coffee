@@ -2,7 +2,7 @@ module.exports =
   # ---------------------
   # SET TRUE WHEN TESTING
   # ---------------------
-  enabled: false
+  enabled: true
 
   # ---------------------
   # DEFINE THE ATTRIBUTES
@@ -29,6 +29,6 @@ module.exports =
   # DEFINE THE OPPONENTS
   # --------------------
   opponents: [
-    require 'debaters/huminski.coffee'
+    require 'debaters/complexity-rubric.coffee'
     require 'debaters/novice.coffee'
   ]
