@@ -13,6 +13,11 @@ module.exports = class Bored extends Effect
       @applied = true
       @originalClash = @target.clash
       @target.clash = Math.max(1, @target.clash - @amount)
+
+    @announce cb, @target.name + ' is having a difficult time staying awake!'
+    if Math.floor(Math.random() * 3) is 1
+      @target.addStatus new Asleep(1)
+
     cb(null)
 
   unload: (cb) ->
