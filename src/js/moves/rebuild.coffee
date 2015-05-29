@@ -12,4 +12,4 @@ module.exports = class Rebuild extends Move
     super()
     healed = @getHealing()
     @user.heal(healed)
-    @announce cb, @user.name + ' has rebuilt their case by #{healed} points!'
+    @announce cb, @user.name + ' has rebuilt their case by ' + healed + ' points!'
