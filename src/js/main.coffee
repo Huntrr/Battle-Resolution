@@ -73,6 +73,18 @@ $ ->
 
     # LEVEL 6 - THE CAPTAIN (boss #1, picture of McMoran)
     # (start dialogue with 'This is your captain speaking. Today, I discovered communism')
+    game.addScreen(new Battle(game, require('debaters/captain.coffee'),
+                              'This is your captain speaking. Today, I have discovered communism.
+                              And I\'m here to share with you the good word... You may have beaten
+                              my right-hand-man (the complexity rubric), but you aren\'t going to
+                              beat me, no matter how AMBIGUOUS you are!',
+                              'Oh... I guess I\'m wrong after all... You\'ve embraced more ambiguity
+                              than I ever have. Oh, teach me more about this INVISIBLE HAND! CAPITALISM
+                              reminds me a lot of my complexity rubric.',
+                              'That\'s right! Embrace ambiguity? Psh, yeah right! More like, embrace
+                              the fact that OWNERSHIP is a LIE and the CLASS-HIERARCHY must die!',
+                              [require('moves/philosophize.coffee'), require('moves/announce.coffee')])
+    )
 
     # LEVEL 20 - CDA Parent Judge
 

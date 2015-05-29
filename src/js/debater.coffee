@@ -57,7 +57,8 @@ module.exports = class Debater
     @canMove = true
 
     actions = []
-    for i in [0...@statuses.length]
+    i = 0
+    while i < @statuses.length
       status = @statuses[i]
       if status.expired() #if it's expired, push its unload function to be executed
         actions.push (cb) =>
@@ -68,6 +69,7 @@ module.exports = class Debater
         actions.push (cb) =>
           status.invoke(cb)
           @update()
+        i++
 
     actions.push (cb) =>
       if @canMove

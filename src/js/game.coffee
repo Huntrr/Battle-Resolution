@@ -3,7 +3,7 @@ require './lib/jquery-ui.js'
 
 # Constants
 LEVELS_TO_STAT_UPGRADE = 2 #update stats every 2 levels
-UPGRADE_AMOUNT = 0.5
+UPGRADE_AMOUNT = 1.0
 
 # imports
 Side = require('./side.coffee')
