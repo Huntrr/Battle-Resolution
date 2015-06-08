@@ -9,12 +9,12 @@ module.exports =
   # ---------------------
   name: 'TESTY MCTESTYPANTS'
   level: 15
-  health: 3
+  health: 6
   clash: 5
-  presentation: 3
-  organization: 3
+  presentation: 6
+  organization: 5
   civility: 5
-  cross: 3
+  cross: 5
 
   # ----------------
   # DEFINE THE MOVES
@@ -24,11 +24,15 @@ module.exports =
     require 'moves/clash.coffee'
     require 'moves/sandal.coffee'
     require 'moves/shout.coffee'
+    require 'moves/rebuild.coffee'
+    require 'moves/announce.coffee'
+    require 'moves/philosophize.coffee'
+    require 'moves/cross.coffee'
   ]
 
   # --------------------
   # DEFINE THE OPPONENTS
   # --------------------
   opponents: [
-    require 'debaters/captain.coffee'
+    require 'debaters/evan.coffee'
   ]
