@@ -105,7 +105,7 @@ $ ->
                               'SURPRISE! I was the DIRTY COMMY the whole time! You see, like everyone
                               in CHINA, I quickly realized the merits of COMMUNISM and shed all traces of
                               my CAPITALIST past! Then, using my superior DEBATE ABILITIES, I convinced the
-                              rest of the CDA to join me. If it hadn\'t been for you MEDDLING DEBATERS, I would
+                              rest of the CDA to join me. If it hadn\'t been for you MEDDLING DEBATER(S), I would
                               have succeeded in my goal of TAKING OVER THE WORLD! But wait... There might be one
                               last hope. If I can convince you to join me--and embrace the COMMY CAUSE--we might,
                               together, have enough debate power to destroy CAPITALISM once and for all! That\'s
@@ -117,6 +117,8 @@ $ ->
                               me from my own destruction... I owe you. The world owes you. AMERICA owes you! And for
                               that reason, Mr. Judge, I urge you to negate the aforementioned resolution. Good job KID,
                               you won.',
+                              'And that is why, Mr. Speaker, you MUST affirm the resolution! Take that you CAPITALIST
+                              PIG! Now, join me, and together we will take over the world!',
                               [])
     )
 

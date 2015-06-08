@@ -6,6 +6,10 @@ module.exports = class Evan extends Debater
   constructor: (@game) ->
     super(@game, true, 'EVAN STREAMS', 31, 7, 'EX-PAT')
 
+    # THESE STATS MIGHT NEED TO BE TWEAKED
+    # DEPENDING ON HOW POWERFUL THE PLAYER
+    # IS OR ISN'T AFTER THE OTHER LEVELS...
+
     # set basic statis
     # ALREADY SET (constructed)
     # @case (HP)
@@ -19,4 +23,6 @@ module.exports = class Evan extends Debater
 
     @addMoveByClass require 'moves/flee.coffee'
     @addMoveByClass require 'moves/assert.coffee'
+    @addMoveByClass require 'moves/sit.coffee'
+    @addMoveByClass require 'moves/vpn.coffee'
     @addMoveByClass require 'moves/announce.coffee'
