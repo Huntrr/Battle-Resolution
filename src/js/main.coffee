@@ -101,6 +101,24 @@ $ ->
     # LEVEL "30" - Evan streams
     # OPENER: I WAS THE COMMUNIST ALL ALONG
     # Need a super lengthy explanation...
+    game.addScreen(new Battle(game, require('debaters/evan.coffee'),
+                              'SURPRISE! I was the DIRTY COMMY the whole time! You see, like everyone
+                              in CHINA, I quickly realized the merits of COMMUNISM and shed all traces of
+                              my CAPITALIST past! Then, using my superior DEBATE ABILITIES, I convinced the
+                              rest of the CDA to join me. If it hadn\'t been for you MEDDLING DEBATERS, I would
+                              have succeeded in my goal of TAKING OVER THE WORLD! But wait... There might be one
+                              last hope. If I can convince you to join me--and embrace the COMMY CAUSE--we might,
+                              together, have enough debate power to destroy CAPITALISM once and for all! That\'s
+                              it! RESOLVED: You are going to help me take over the world! I have three major
+                              CONTENTIONS!',
+                              'What. What? You mean... You\'re right! There IS no society on the PLANET ideal enough
+                              for COMMUNISM to be successful! I never thought about it like that... I guess... I guess...
+                              I guess I\'ll just have to settle for CAPITALISM. Thank you, young stranger, for saving
+                              me from my own destruction... I owe you. The world owes you. AMERICA owes you! And for
+                              that reason, Mr. Judge, I urge you to negate the aforementioned resolution. Good job KID,
+                              you won.',
+                              [])
+    )
 
     # Closing screen for winning, show Evan back to good side
 
