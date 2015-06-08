@@ -6,11 +6,12 @@ module.exports = class Shout extends Move
     super 'SHOUT'
 
   getDamage: () ->
-    if @user.has 'ANGRY' then return 0.5 else return 1
+    damage = @user.clash - @target.clash
+    if @user.has 'ANGRY' then damage *= 0.75
+    return damage
 
   use: (cb) ->
     super()
-
     @target.damage(@getDamage())
     Angry = require 'effects/angry.coffee'
     if not @user.has 'ANGRY'
