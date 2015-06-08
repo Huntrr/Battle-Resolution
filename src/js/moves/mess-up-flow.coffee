@@ -6,9 +6,9 @@ module.exports = class MessUpFlow extends Move
     super 'MESS UP FLOW'
 
   getDamage: () ->
-    return @target.presentation - @user.presentation * 0.5
+    return @target.presentation - @user.presentation * (Math.random()) * 0.25
 
-  use: () ->
+  use: (cb) ->
     super()
     @target.damage(@getDamage())
     @announce cb, @user.name + ' did what a parent judge does best!'
