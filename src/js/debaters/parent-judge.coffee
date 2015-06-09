@@ -12,7 +12,7 @@ module.exports = class ParentJudge extends Debater
     # @level (speaker score) (Lvl)
     # @type (type)
     @clash = 4 # ATTACK
-    @presentation = 6 # SP. ATTACK
+    @presentation = 3 # SP. ATTACK
     @organization = 4 # SPEED
     @civility = 6 # Totally arbitrary
     @cross = 3 # DEFENCE
