@@ -1,3 +1,4 @@
+ # coffeelint: disable=max_line_length
 $ = require './lib/jquery.js'
 
 $ ->
@@ -83,6 +84,14 @@ $ ->
     )
 
     # LEVEL 20 - CDA Parent Judge
+    game.addScreen(new Battle(game, require('debaters/parent-judge.coffee'),
+                              'WAIT JUST ONE FREE THINKING MOMENT!! You\'ve been
+                              advocating for CAPITALISM?! How\'d you win so much when I\'ve been judging you?
+                              Either way... You\'ll have to beat ME now! ',
+                              'Wait who\'s judging? Huh... well you win this time! I guess there\'s a reason
+                              you\'ve been winning ',
+                              'pffft guess I\'ll have to look out twice for dirty CAPPY\'S like yourself',
+                              [require 'moves/mess-up-flow.coffee']))
 
     # LEVEL 22 - Sam Aldershof
 
