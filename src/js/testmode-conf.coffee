@@ -2,7 +2,7 @@ module.exports =
   # ---------------------
   # SET TRUE WHEN TESTING
   # ---------------------
-  enabled: true
+  enabled: false
 
   # ---------------------
   # DEFINE THE ATTRIBUTES

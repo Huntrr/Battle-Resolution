@@ -20,8 +20,8 @@ module.exports = class ComplexityRubric extends Debater
     Star = require 'moves/star.coffee'
     @addMove new Star()
 
-    Shout = require 'moves/shout.coffee'
-    @addMove new Shout()
+    #Shout = require 'moves/shout.coffee'
+    #@addMove new Shout()
 
     AggressiveHighlight = require 'moves/aggressive-highlight.coffee'
     @addMove new AggressiveHighlight()

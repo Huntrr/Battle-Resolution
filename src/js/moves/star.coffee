@@ -13,4 +13,4 @@ module.exports = class Star extends Move
 
     @target.damage(@getDamage())
 
-    @announce cb, @user.name + ' stopped to think, act, and reflect on its actions. \nIt was not very effective... '
+    @announce cb, @user.name + ' stopped to think, act, and reflect on its actions. It is was not very effective...'

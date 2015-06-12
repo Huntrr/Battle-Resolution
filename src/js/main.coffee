@@ -73,10 +73,10 @@ $ ->
 
     # LEVEL 5 - The Complexity Rubric (secretly a communist plot)
     game.addScreen(new Battle(game, require('debaters/complexity-rubric.coffee'),
-                                    'I am a communist.',
-                                    'I have been slain.',
-                                    'I win.',
-                                    [require('moves/shout.coffee')])
+                                    'WE WILL NOT STOP UNTIL THE ENTIRE SCHOOL HAS SUCCUMBED TO STANDARDS.',
+                                    'NOT...ENOUGH...AMBIGUOUS RISK-TAKING...',
+                                    'YOU ARE A DEVELOPING DEBATER.',
+                                    [require('moves/star.coffee')])
     )
     # LEVEL 6 - THE CAPTAIN (boss #1, picture of McMoran)
     # (start dialogue with 'This is your captain speaking. Today, I discovered communism')
