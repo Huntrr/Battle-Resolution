@@ -99,6 +99,17 @@ $ ->
 
     # LEVEL 27 - Alyssa Bilinski
     # Special move: Talk about Grandma's cookies (the Judge was thoroughly Pathos'd)
+    game.addScreen(new Battle(game, require('debaters/alyssa.coffee'),
+                              'If YALE (together with XI JINPING) taught me anything,
+                              it\'s that I can save the world, and that the path to
+                              saving the world is paved with COMMUNISM. And FRESH BAKED
+                              COOKIES. Here are my THREE CONTENTIONS. You\'re about to be
+                              BILINSKI\'d!',
+                              'What? I lost!? The last time I LOST a debate was in <ERROR: 404,
+                              YEAR NOT FOUND>! Well I guess you\'re right after all then...',
+                              'And THAT is why you must AFFIRM. Thank you for your time and I now
+                              stand open to kicking this CAPPY\'s ***',
+                              [require('moves/bake-cookies.coffee'), require('moves/save-world.coffee')]))
 
     # LEVEL 28 - Ron Paul (thinks he is at Libertarian National Convention)
     # Special move: The Gold Standard
