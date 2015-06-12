@@ -34,5 +34,5 @@ module.exports =
   # DEFINE THE OPPONENTS
   # --------------------
   opponents: [
-    require 'debaters/evan.coffee'
+    require 'debaters/alyssa.coffee'
   ]
