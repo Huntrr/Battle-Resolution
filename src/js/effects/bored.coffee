@@ -13,7 +13,12 @@ module.exports = class Bored extends Effect
       @applied = true
       @originalClash = @target.clash
       @target.clash = Math.max(1, @target.clash - @amount)
-    cb(null)
+
+    Asleep = require 'effects/asleep.coffee'
+    @game.console.put @target.name + ' is having a difficult time staying awake!', cb
+    if Math.floor(Math.random() * 4) is 1 and not @target.has 'ASLEEP'
+      # 1/something chance of falling asleep as long as the target isn't already asleep
+      @target.addStatus new Asleep(1)
 
   unload: (cb) ->
     # should gracefully remove the effects of the status

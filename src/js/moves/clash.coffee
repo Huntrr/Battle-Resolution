@@ -7,7 +7,7 @@ module.exports = class Clash extends Move
     super 'CLASH'
 
   getDamage: () ->
-    return Math.max(0, @user.clash / 3 - @target.organization / 12)
+    return Math.max(0, (@user.clash / 3) - (@target.organization / 12))
 
   use: (cb) ->
     super()

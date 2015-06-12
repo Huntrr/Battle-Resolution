@@ -17,7 +17,7 @@ module.exports = class Battle extends Screen
     @game.opponentElem.show()
     @game.playerElem.show()
     @game.console.show()
-    
+
     @game.opponent.say @opener, (err) => @begin()
 
   unload: () ->
@@ -63,7 +63,7 @@ module.exports = class Battle extends Screen
       else
         # keep going
         @makeTurn()
-  
+
   begin: () ->
     @makeTurn()
     console.log 'Beginning fight'
