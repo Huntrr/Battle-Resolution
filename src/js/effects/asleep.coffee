@@ -8,8 +8,8 @@ module.exports = class Asleep extends Effect
   invoke: (cb) ->
     super(cb)
     @target.canMove = false
-    @game.console.put(@target.name + ' is asleep and can\'t speak!.', cb)
-    cb(null)
+    console.log 'canmove: ' + @target.canMove
+    @game.console.put(@target.name + ' is asleep and can\'t speak!', cb)
 
   unload: (cb) ->
     # should gracefully remove the effects of the status

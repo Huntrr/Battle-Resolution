@@ -54,21 +54,21 @@ $ ->
     )
 
     # LEVEL 3 - Really aggressive novice
-    game.addScreen(new Battle(game, require('debaters/aggressive-novice.coffee'),
-                              'FREE THOUGHT is dumb! SMITH only teaches you
-                              stock arguments anyway...',
-                              'I still refuse to change my way of thinking.
-                              The JUDGE was the wrong one here.',
-                              'Ha ha! I told you FREE THOUGHT was super dumb',
-                              [require('moves/shout.coffee')])
-    )
+    # game.addScreen(new Battle(game, require('debaters/aggressive-novice.coffee'),
+    #                           'FREE THOUGHT is dumb! SMITH only teaches you
+    #                           stock arguments anyway...',
+    #                           'I still refuse to change my way of thinking.
+    #                           The JUDGE was the wrong one here.',
+    #                           'Ha ha! I told you FREE THOUGHT was super dumb',
+    #                           [require('moves/shout.coffee')])
+    # )
 
     # LEVEL 4 - Sophmore Slumper
     game.addScreen(new Battle(game, require('debaters/sophmore-slumper.coffee'),
                               'ugh, why even bother with this...? woo COMMUNISM',
                               'whatever CAPITALISM is fine too I guess',
-                              'what? gee dude, you sure you\'re a varsity worthy debater?'),
-                              [require('moves/half-assed-case.coffee')])
+                              'what? gee dude, you sure you\'re a varsity worthy debater?',
+                              [require('moves/half-assed-case.coffee')]))
 
     # LEVEL 5 - The Complexity Rubric (secretly a communist plot)
 

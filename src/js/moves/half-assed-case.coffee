@@ -10,7 +10,7 @@ module.exports = class HalfAssedCase extends Move
 
   use: (cb) ->
     super()
-
+    Bored = require('../effects/bored.coffee')
     if !@target.has 'BORED'
       @target.addStatus new Bored(2, Math.floor(Math.random() * 3) + 1)
       @announce cb, @target.name + ' looks bored, how rude.'
