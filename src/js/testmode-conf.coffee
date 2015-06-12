@@ -9,9 +9,9 @@ module.exports =
   # ---------------------
   name: 'TESTY MCTESTYPANTS'
   level: 15
-  health: 5
+  health: 6
   clash: 5
-  presentation: 5
+  presentation: 6
   organization: 5
   civility: 5
   cross: 5
@@ -23,6 +23,11 @@ module.exports =
     require 'moves/flourish.coffee'
     require 'moves/clash.coffee'
     require 'moves/sandal.coffee'
+    require 'moves/shout.coffee'
+    require 'moves/rebuild.coffee'
+    require 'moves/announce.coffee'
+    require 'moves/philosophize.coffee'
+    require 'moves/cross.coffee'
   ]
 
   # --------------------
@@ -31,4 +36,5 @@ module.exports =
   opponents: [
     require 'debaters/complexity-rubric.coffee'
     require 'debaters/novice.coffee'
+    require 'debaters/alyssa.coffee'
   ]
