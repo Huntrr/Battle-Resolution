@@ -27,7 +27,7 @@ $ ->
     # Battle screens
     Battle = require './battle.coffee'
 
-    LEVEL 1 - Novice
+    # LEVEL 1 - Novice
     game.addScreen(new Battle(game, require('debaters/novice.coffee'),
                               'This is my first debate! I hope I can
                               convince you of the merits of COMMUNISM...
@@ -123,7 +123,7 @@ $ ->
                               [require('moves/bake-cookies.coffee'), require('moves/save-world.coffee')]))
 
     # LEVEL 28 - Ron Paul (thinks he is at Libertarian National Convention)
-    game.addScreen(new Battle(game, require('debaters/ron-paul.coffee'),
+    game.addScreen(new Battle(game, require('./debaters/ron-paul.coffee'),
                               'Is this the Libertarian National Convention??
                               ...     ...     ...whaaaaaat? Invisible hands?
                                     Radical freedom?',
