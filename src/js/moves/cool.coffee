@@ -4,7 +4,7 @@ Move = require './../move.coffee'
 # PROOF BY ASSERTION IS A VALID TACTIC OF ARGUMENT
 module.exports = class Cool extends Move
   constructor: () ->
-    super 'Cool Ego'
+    super 'COOL EGO'
 
   getDamage: () ->
     return @user.civility

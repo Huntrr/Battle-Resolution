@@ -4,7 +4,7 @@ Move = require './../move.coffee'
 # 30% chance of backfiring and hurting your own case
 module.exports = class Corruption extends Move
   constructor: () ->
-    super 'Eradicate Corruption'
+    super 'ERADICATE CORRUPTION'
     @failure = Math.random()
 
   getDamage: () ->

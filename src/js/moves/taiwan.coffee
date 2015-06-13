@@ -22,4 +22,4 @@ module.exports = class Taiwan extends Move
         @announce cb, @target.name + ' became enraged!'
     else
       @user.damage(1000000)
-      @announce cb, 'But mentioning Taiwanese Independence is against the rules! ' + @user.name + ' was kicked out of the tournament!'
+      @announce cb, 'But mentioning TAIWANESE INDEPENDENCE is against the rules! ' + @user.name + ' was kicked out of the tournament!'

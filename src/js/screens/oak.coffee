@@ -111,9 +111,9 @@ module.exports = class Oak extends Screen
                            attention to your opponents. Your end-goal, of course, is saving EVAN
                            STREAMS from the DIRTY COMMIES. You gotta out-debate them all. You must convince those COMMUNISTS
                            that the AMERICAN WAY is best, and you must rescue EVAN STREAMS. Good luck ' + @game.player.name + '.', cb
-        @game.player.addMoveByClass require 'moves/taiwan.coffee'
       (cb) =>
-        @game.opponent.say 'Oh yeah, and one last thing, ' + @game.player.name + '. Never mention Taiwanese Independence. It is the only rule. Taiwanese Independence Added to Move List.', cb
+        @game.player.addMoveByClass require 'moves/taiwan.coffee'
+        @game.opponent.say 'Oh yeah, and one last thing, ' + @game.player.name + '. Never mention TAIWANESE INDEPENDENCE. It is the only rule. TAIWANESE INDEPENDENCE added to MOVE LIST.', cb
       (cb) =>
         @game.next()
       ]

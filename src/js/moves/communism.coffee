@@ -4,7 +4,7 @@ Move = require './../move.coffee'
 # WHEN I DOUBT, QUOTE MAO
 module.exports = class Communism extends Move
   constructor: () ->
-    super 'Quote Mao'
+    super 'QUOTE MAO'
     @messages = [
       'Every Communist must grasp the truth: Political power grows out of the barrel of a gun.'
     ]
