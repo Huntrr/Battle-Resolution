@@ -23,7 +23,7 @@ module.exports = class Dialog
     @show false
 
   draw: () ->
-    itemHeight = 85
+    itemHeight = 100
     num = (@elem.height() - @title.height()) / itemHeight
     num = if num >= @list.length then @list.length - 1 else num
 

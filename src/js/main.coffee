@@ -27,7 +27,7 @@ $ ->
     # Battle screens
     Battle = require './battle.coffee'
 
-    LEVEL 1 - Novice
+    #LEVEL 1 - Novice
     game.addScreen(new Battle(game, require('debaters/novice.coffee'),
                               'This is my first debate! I hope I can
                               convince you of the merits of COMMUNISM...
@@ -119,18 +119,10 @@ $ ->
                               'What? I lost!? The last time I LOST a debate was in <ERROR: 404,
                               YEAR NOT FOUND>! Well I guess you\'re right after all then...',
                               'And THAT is why you must AFFIRM. Thank you for your time and I now
-                              stand open to kicking this CAPPY\'s ***',
+                              stand open to kicking this CAPPY\'s BUTT'
                               [require('moves/bake-cookies.coffee'), require('moves/save-world.coffee')]))
 
     # LEVEL 28 - Ron Paul (thinks he is at Libertarian National Convention)
-    game.addScreen(new Battle(game, require('debaters/ron-paul.coffee'),
-                              'Is this the Libertarian National Convention??
-                              ...     ...     ...whaaaaaat? Invisible hands?
-                                    Radical freedom?',
-                              'Blasted! Well I guess I\'ll run again next year',
-                              'HA! ...Wait I won something? It wasn\'t the pesidency was it?
-                              ....... didn\'t think so',
-                              [require 'moves/run-for-pres.coffee']))
     # Special move: The Gold Standard
     # Special move: Summon Brooke Curto
     game.addScreen(new Battle(game, require('debaters/ron-paul.coffee'),
