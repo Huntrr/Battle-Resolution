@@ -125,6 +125,14 @@ $ ->
     # LEVEL 28 - Ron Paul (thinks he is at Libertarian National Convention)
     # Special move: The Gold Standard
     # Special move: Summon Brooke Curto
+    game.addScreen(new Battle(game, require('debaters/ron-paul.coffee'),
+                              'Is this the Libertarian National Convention??
+                              ...     ...     ...whaaaaaat? Invisible hands?
+                                    Radical freedom?',
+                              'Blasted! Well I guess I\'ll come again next year',
+                              'HA! ...Wait I won something? It wasn\'t the pesidency was it?
+                              ....... didn\'t think so',
+                              [require 'moves/run-for-pres.coffee']))
 
     # LEVEL 29 - Xi Jinping
     # PLOT TWIST: LOSE MESSAGE: Reveal EVAN IS A COMMY (You can see your friend now, but I have a surprise for you...)
