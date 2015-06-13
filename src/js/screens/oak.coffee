@@ -102,6 +102,7 @@ module.exports = class Oak extends Screen
         @game.dialog.arrMenu 'Choose a technique to learn:', @game.availableMoves, cb
 
       (move, cb) =>
+        @game.removeMove(move.name)
         @game.player.addMove(move)
         @game.opponent.say move.name + '? I can definitely explain that... (one hour later)...
                            THERE! All set! Now it\'s off to debate. You\'ll begin in the novice
