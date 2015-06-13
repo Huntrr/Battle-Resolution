@@ -28,13 +28,14 @@ module.exports =
     require 'moves/announce.coffee'
     require 'moves/philosophize.coffee'
     require 'moves/cross.coffee'
+    require 'moves/taiwan.coffee'
   ]
 
   # --------------------
   # DEFINE THE OPPONENTS
   # --------------------
   opponents: [
-    require 'debaters/complexity-rubric.coffee'
+    require 'debaters/evan.coffee'
     require 'debaters/novice.coffee'
     require 'debaters/alyssa.coffee'
   ]

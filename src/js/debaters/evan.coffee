@@ -18,7 +18,7 @@ module.exports = class Evan extends Debater
     @clash = 5 # ATTACK
     @presentation = 5 # SP. ATTACK
     @organization = 7 # SPEED
-    @civility = 6 # Totally arbitrary
+    @civility = 10 # Totally arbitrary
     @cross = 5 # DEFENCE
 
     @addMoveByClass require 'moves/flee.coffee'
@@ -26,3 +26,4 @@ module.exports = class Evan extends Debater
     @addMoveByClass require 'moves/sit.coffee'
     @addMoveByClass require 'moves/vpn.coffee'
     @addMoveByClass require 'moves/announce.coffee'
+    @addMoveByClass require 'moves/cool.coffee'

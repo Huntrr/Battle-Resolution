@@ -24,6 +24,8 @@ module.exports = class Player extends Debater
     @startingOrganization = @organization
     @startingCivility = @civility
     @startingCross = @cross
+    
+
 
   load: () ->
     console.log 'Reloading player'
