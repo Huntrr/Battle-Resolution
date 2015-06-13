@@ -20,8 +20,7 @@ module.exports = class Xi extends Debater
     @organization = 3 # SPEED
     @civility = 0 # Totally arbitrary
     @cross = 6 # DEFENCE
-    
+
     @addMoveByClass require 'moves/shout.coffee'
     @addMoveByClass require 'moves/corruption.coffee'
     @addMoveByClass require 'moves/communism.coffee'
-    #@addMoveByClass require 'moves/taiwan.coffee'

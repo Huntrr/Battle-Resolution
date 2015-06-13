@@ -8,7 +8,7 @@ module.exports = class Angry extends Effect
   invoke: (cb) ->
     super(cb)
     @target.civility -= 10
-    @game.console.put(@target.name + ' is ENRAGED by TAIWANESE INDEPENDENCE.' + @target.name + " just lost 10 civility points!", cb)
+    @game.console.put(@target.name + ' is ENRAGED by TAIWANESE INDEPENDENCE. ' + @target.name + " just lost 10 civility points!", cb)
 
   unload: (cb) ->
     # should gracefully remove the effects of the status

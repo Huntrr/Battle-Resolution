@@ -26,3 +26,4 @@ module.exports = class Evan extends Debater
     @addMoveByClass require 'moves/sit.coffee'
     @addMoveByClass require 'moves/vpn.coffee'
     @addMoveByClass require 'moves/announce.coffee'
+    @addMoveByClass require 'moves/cool.coffee'

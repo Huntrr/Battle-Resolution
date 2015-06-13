@@ -14,9 +14,12 @@ module.exports = class Taiwan extends Move
     super()
     Rage = require 'effects/rage.coffee'
     @target.damage(@getDamage())
-    if @target.has('RAGE')
-      @announce cb, 'But ' + @target.name + ' was already ENRAGED and
-                                            the attack did nothing'
+    if @target.name == 'EVAN STREAMS'
+      if @target.has('RAGE')
+        @announce cb, 'But ' + @target.name + ' was already ENRAGED!'
+      else
+        @target.addStatus new Rage()
+        @announce cb, @target.name + ' became enraged!'
     else
-      @target.addStatus new Rage()
-      @announce cb, @target.name + ' became enraged by the prospect of Taiwanese independence!'
+      @user.damage(1000000)
+      @announce cb, 'But mentioning Taiwanese Independence is against the rules! ' + @user.name + ' was kicked out of the tournament!'
