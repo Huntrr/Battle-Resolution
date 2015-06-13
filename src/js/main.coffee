@@ -127,7 +127,11 @@ $ ->
 
     # LEVEL 29 - Xi Jinping
     # PLOT TWIST: LOSE MESSAGE: Reveal EVAN IS A COMMY (You can see your friend now, but I have a surprise for you...)
-
+    game.addScreen(new Battle(game, require('debaters/xi.coffee'),
+                              'Has the little money-grabbing punk come to rescue his little friend? I knew I couldn\'t trust those CORRUPT officials to do my dirty work. Now it is time for me to end this.',
+                              '...I now realize the error of the dream of reviving WORLDWIDE COMMUNISM. You can see your friend now, but we have created a monster that even I cannot contain... But here take this. You will know when to use it.',
+                              'Should have sent Kissinger.',
+                              [require('moves/taiwan.coffee')]))
     # LEVEL "30" - Evan streams
     # OPENER: I WAS THE COMMUNIST ALL ALONG
     # Need a super lengthy explanation...
