@@ -54,14 +54,15 @@ $ ->
     )
 
     # LEVEL 3 - Really aggressive novice
-    # game.addScreen(new Battle(game, require('debaters/aggressive-novice.coffee'),
-    #                           'FREE THOUGHT is dumb! SMITH only teaches you
-    #                           stock arguments anyway...',
-    #                           'I still refuse to change my way of thinking.
-    #                           The JUDGE was the wrong one here.',
-    #                           'Ha ha! I told you FREE THOUGHT was super dumb',
-    #                           [require('moves/shout.coffee')])
-    # )
+    game.addScreen(new Battle(game, require('debaters/aggressive-novice.coffee'),
+                              'FREE THOUGHT is dumb! SMITH only teaches you
+                              stock arguments anyway...',
+                              'I still refuse to change my way of thinking.
+                              The JUDGE was the wrong one here.',
+                              'Ha ha! I told you FREE THOUGHT was super dumb',
+                              #require('moves/gaff.coffee'), add back in later
+                              [require('moves/shout.coffee')])
+    )
 
     # LEVEL 4 - Sophmore Slumper
     game.addScreen(new Battle(game, require('debaters/sophmore-slumper.coffee'),
@@ -71,7 +72,12 @@ $ ->
                               [require('moves/half-assed-case.coffee')]))
 
     # LEVEL 5 - The Complexity Rubric (secretly a communist plot)
-
+    game.addScreen(new Battle(game, require('debaters/complexity-rubric.coffee'),
+                                    'WE WILL NOT STOP UNTIL THE ENTIRE SCHOOL HAS SUCCUMBED TO STANDARDS.',
+                                    'NOT...ENOUGH...AMBIGUOUS RISK-TAKING...',
+                                    'YOU ARE A DEVELOPING DEBATER.',
+                                    [require('moves/star.coffee')])
+    )
     # LEVEL 6 - THE CAPTAIN (boss #1, picture of McMoran)
     # (start dialogue with 'This is your captain speaking. Today, I discovered communism')
     game.addScreen(new Battle(game, require('debaters/captain.coffee'),
