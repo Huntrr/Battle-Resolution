@@ -13,4 +13,4 @@ module.exports = class Clash extends Move
     super()
     damage = @getDamage()
     @target.damage(damage)
-    @announce cb, if damage < 0.25 then 'It was not very effective' else ''
+    @announce cb, if damage < 0.25 then 'It was not very effective...' else ''

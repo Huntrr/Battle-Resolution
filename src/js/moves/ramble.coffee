@@ -14,7 +14,7 @@ module.exports = class Ramble extends Move
     # Only works if target isn't currently bored
     if @target.has('BORED')
       @announce cb, 'But ' + @target.name + ' was already BORED and
-                                            the attack did nothing'
+                                            the attack did nothing...'
     else
       # reduce clash (temporarily) by 2
       @target.addStatus new Bored(2, Math.floor(Math.random() * 3) + 1)

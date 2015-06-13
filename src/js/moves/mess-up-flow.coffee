@@ -11,4 +11,4 @@ module.exports = class MessUpFlow extends Move
   use: (cb) ->
     super()
     @target.damage(@getDamage())
-    @announce cb, @user.name + ' did what a parent judge does best!'
+    @announce cb, @user.name + ' did what a parent judge does best! The messed up fllow dealt ' + @getDamage() + ' damage to ' + @target.name + '!'

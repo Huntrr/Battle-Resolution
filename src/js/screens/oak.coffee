@@ -90,7 +90,7 @@ module.exports = class Oak extends Screen
         if(result is yes)
           @game.opponent.say 'Excellent! You\'ll have to head out now and face all of the
                               debaters XI JINPING has turned into COMMUNISTS. Once you\'ve defeated
-                              all of them, you\'ll face JINPING himself. But, before you go, I
+                              all of them, you\'ll parle with XI himself. But, before you go, I
                               can teach you ONE TECHNIQUE. What would you like to learn?', cb
 
         if(result is no)
@@ -114,7 +114,7 @@ module.exports = class Oak extends Screen
                            that the AMERICAN WAY is best, and you must rescue EVAN STREAMS. Good luck ' + @game.player.name + '.', cb
       (cb) =>
         @game.player.addMoveByClass require 'moves/taiwan.coffee'
-        @game.opponent.say 'Oh yeah, and one last thing, ' + @game.player.name + '. Never mention TAIWANESE INDEPENDENCE. It is the only rule. TAIWANESE INDEPENDENCE added to MOVE LIST.', cb
+        @game.opponent.say 'Oh yeah, and one last thing, ' + @game.player.name + '. Never mention Taiwanese Independence. The communist judges don\'t like Taiwan. ASSERT TAIWANESE INDEPENDENCE added to MOVE LIST.', cb
       (cb) =>
         @game.next()
       ]

@@ -20,8 +20,8 @@ module.exports = class HalfAssedCase extends Move
 
     if damage < 0.5
       message = @user.name + ' looked sad and the JUDGE didn\'t
-                                like their lack of confidence'
+                                like their lack of confidence....'
     else
-      message = @user.name + ' managed to slip in an unnoticed fallacy.'
+      message = @user.name + ' managed to slip in an unnoticed fallacy!'
 
     @announce cb, message

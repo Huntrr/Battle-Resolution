@@ -10,9 +10,9 @@ module.exports = class Corruption extends Move
   getDamage: () ->
     @failure = Math.random()
     if (@failure < 0.30)
-      return @user.cross/2
+      return @user.case/2
     else
-      return @target.cross/2
+      return @target.case/2
 
 
   use: (cb) ->

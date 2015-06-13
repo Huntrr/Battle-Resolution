@@ -74,22 +74,22 @@ $ ->
 
     # LEVEL 5 - The Complexity Rubric (secretly a communist plot)
     game.addScreen(new Battle(game, require('debaters/complexity-rubric.coffee'),
-                                    'WE WILL NOT STOP UNTIL THE ENTIRE SCHOOL HAS SUCCUMBED TO STANDARDS.',
-                                    'NOT...ENOUGH...AMBIGUOUS RISK-TAKING...',
-                                    'YOU ARE A DEVELOPING DEBATER.',
+                                    'WE WILL NOT STOP UNTIL THE ENTIRE WORLD HAS SUCCUMBED TO STANDARDS AND QUOTAS.',
+                                    'TOO...MUCH...RISK TAKING...',
+                                    'YOU ARE A DEVELOPING DEBATER. LONG LIVE THE COMMON CORE!',
                                     [require('moves/star.coffee')])
     )
     # LEVEL 6 - THE CAPTAIN (boss #1, picture of McMoran)
     # (start dialogue with 'This is your captain speaking. Today, I discovered communism')
     game.addScreen(new Battle(game, require('debaters/captain.coffee'),
-                              'This is your captain speaking. Today, I have discovered communism.
+                              'This is your captain speaking. Today, I have discovered COMMUNISM.
                               And I\'m here to share with you the good word... You may have beaten
-                              my right-hand-man (the complexity rubric), but you aren\'t going to
+                              my right-hand-man (The Complexity Rubric), but you aren\'t going to
                               beat me, no matter how AMBIGUOUS you are!',
-                              'Oh... I guess I\'m wrong after all... You\'ve embraced more ambiguity
+                              'Oh... I guess I\'m wrong after all... You\'ve embraced more AMBIGUITY
                               than I ever have. Oh, teach me more about this INVISIBLE HAND! CAPITALISM
-                              reminds me a lot of my complexity rubric.',
-                              'That\'s right! Embrace ambiguity? Psh, yeah right! More like, embrace
+                              reminds me a lot of my Complexity Rubric.',
+                              'That\'s right! Embrace AMBIGUITY? Psh, yeah right! More like, embrace
                               the fact that OWNERSHIP is a LIE and the CLASS-HIERARCHY must die!',
                               [require('moves/philosophize.coffee'), require('moves/announce.coffee')])
     )

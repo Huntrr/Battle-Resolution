@@ -19,6 +19,6 @@ module.exports = class Philosophize extends Move
       damage = @getDamage()
       @user.damage(damage)
       @user.addStatus new Enlightened('ENLIGHTENED', 3)
-      @announce cb, 'They became ENLIGHTENED'
+      @announce cb, 'They became ENLIGHTENED! '
     else
-      @announce cb, 'But they were already ENLIGHTENED and it was not very effective'
+      @announce cb, 'But they were already ENLIGHTENED and it was not very effective....'

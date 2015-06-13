@@ -15,4 +15,4 @@ module.exports = class Base extends Move
     @target.damage(damage)
     @announce (err) =>
       @game.console.put @user.name + ': Let me tell you a story about BAKING COOKIES...', cb
-    , if damage < 0.25 then 'It was not very effective' else ''
+    , if damage < 0.25 then 'It was not very effective...' else ''
