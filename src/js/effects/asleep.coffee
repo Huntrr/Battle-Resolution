@@ -15,4 +15,3 @@ module.exports = class Asleep extends Effect
     # should gracefully remove the effects of the status
     super(cb)
     @game.console.put(@target.name + ' wakes with a snort.', cb)
-    cb(null)
